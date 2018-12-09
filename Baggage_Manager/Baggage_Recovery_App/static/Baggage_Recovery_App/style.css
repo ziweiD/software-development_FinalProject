@@ -1,0 +1,437 @@
+/*landing page*/
+.landing {
+  width: 100%;
+  height: 100%;
+  background-image: url("asset/bg-landing.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.ua-logo {
+  width: 100%;
+}
+
+.ua-logo-container {
+  padding-top: 30%;
+  width: 55%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.app-name {
+  font-family: "SF Pro Display", sans-serif;
+  color: white;
+  font-size: 17px;
+  letter-spacing: 4px;
+  margin-top: 0;
+}
+
+p {
+  font-size: 15px;
+}
+
+.ui.fluid.button {
+  font-weight: 400;
+}
+
+.ui.white.fluid.button {
+  background: white;
+  margin-top: 5%;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.ui.white.fluid.button:active {
+  background: #ddd;
+}
+
+.button-container {
+  font-size: 16px;
+  color: white;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  /*padding-top: 48%;*/
+  position: absolute;
+  left: 5%;
+  bottom: 3%;
+}
+/*landing page*/
+
+/*nav bar*/
+.nav-bar {
+  background: #000000 !important;
+  height: 64px;
+}
+
+.nav-bar-button {
+  font-size: 18px;
+  padding-top: 23px;
+  width: 65px;
+  display: inline-block;
+}
+
+.nav-bar-button > a {
+  color: white;
+}
+
+.nav-bar-logo {
+  display: inline-block;
+  width: 110px;
+  float: right;
+  padding: 23px 10px 0 0;
+}
+/*nav bar*/
+
+.main {
+  width: 90%;
+  margin: 20px auto 0 auto;
+}
+
+.main form h1 {
+  color: #000000;
+  font-weight: normal;
+  margin: 0;
+}
+
+.main h1 {
+  color: #000000;
+  font-weight: normal;
+  margin: 0;
+}
+
+.main > .ui.input {
+  padding-top: 10px;
+}
+
+.bottom-button {
+  width: 100%;
+  margin: 10px auto;
+  padding-bottom: 10px;
+}
+
+.bottom-fixed-button {
+  width: 90%;
+  position: fixed;
+  bottom: 20px;
+  left: 5%;
+}
+
+.ui.button.ua-blue {
+  color: #fff;
+  background: #000000;
+}
+
+#cards {
+  width: 100%;
+  margin: 10px auto;
+}
+
+.ui.raised.card {
+  width: 100%;
+}
+
+.card-image {
+  width: 100%;
+  height: 337px;
+  overflow: hidden;
+}
+
+.ui.fluid.buttons {
+  padding-top: 10px;
+}
+
+/*add new bag*/
+.upload-image {
+  width: 120px;
+  margin: 30px auto;
+}
+
+.upload-image > img {
+  padding: 10px;
+  width: 120px;
+  border: solid 3px #000000;
+  border-radius: 20px;
+}
+
+#preview {
+  width: 300px;
+  margin: 10px auto;
+}
+
+#preview > img {
+  width: 300px;
+}
+
+#exampleImg {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  padding: 5%;
+  display: none;
+}
+
+.example-image {
+  width: 100%;
+}
+
+.example-button {
+  float: left;
+  padding: 5% 0;
+}
+
+#bagImageInput {
+  display: none;
+}
+
+/*edit image*/
+#oldImage {
+  width: 100px;
+  margin: 10px auto;
+}
+
+#oldImage > img {
+  width: 100px;
+}
+
+/*missing baggage report*/
+.ui.slider.checkbox.item {
+  min-height: 35px;
+}
+
+.report-section {
+  margin: 10px 0;
+}
+
+.report-section > .meta {
+  margin-top: 5px;
+}
+
+.ui.grid.slider-section {
+  padding-top: 5px;
+}
+
+.color-block {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.black {
+  background: black;
+}
+
+.grey {
+  background: grey;
+}
+
+.blue {
+  background: blue;
+}
+
+.purple {
+  background: purple;
+}
+
+.yellow {
+  background: yellow;
+}
+
+.red {
+  background: red;
+}
+
+.brown {
+  background: brown;
+}
+
+.green {
+  background: green;
+}
+
+.beige {
+  background: beige;
+}
+
+.multicolor {
+  background: linear-gradient(to right, red, yellow, blue);
+}
+
+.bag-option-image {
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+}
+
+.bag-option-image > img {
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.bag-option-content {
+  display: inline-block;
+  width: 300px;
+  position: absolute;
+  padding-left: 110px;
+}
+
+.ui.raised.card.bag-option {
+  width: 100%;
+  height: 100px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+/*warehouse landing*/
+.wh-landing {
+  width: 100%;
+  height: 100%;
+  background-image: url("asset/bg-wh-landing.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.wh-landing > div > h1 {
+  font-family: "SF Pro Display", sans-serif;
+  color: white;
+  font-size: 15px;
+  letter-spacing: 3px;
+  margin-top: 0;
+}
+
+.wh-button-container {
+  font-size: 16px;
+  color: white;
+  width: 90%;
+  position: absolute;
+  margin: 0 5%;
+  bottom: 4%;
+}
+
+.ui.circular.white.fluid.button {
+  border-radius: 10em;
+  margin-top: 4%;
+}
+
+/*registration finished*/
+h3.ua-blue {
+  color: #000000;
+}
+.check-mark-container {
+  width: 40%;
+  margin: 50% auto;
+}
+.check-mark {
+  width: 100%;
+}
+
+/*matching result*/
+.current-bag > img {
+  width: 100%;
+}
+
+.ui.raised.card {
+  width: 100%;
+}
+
+table.content-table {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+td.ua-blue {
+  color: #000000;
+  background-color: rgba(0, 0, 50, 0.02);
+}
+
+table,
+td,
+th {
+  border: 1px solid rgba(34, 36, 38, 0.15);
+}
+
+.content-table tr td {
+  text-align: left;
+  padding: 10px;
+}
+
+.content-table tr th {
+  text-align: left;
+  padding: 10px;
+}
+
+.detail-section {
+  margin-bottom: 10px;
+}
+
+/*all reports*/
+.right-fixed {
+  position: absolute;
+  top: 350px;
+  right: 5%;
+}
+
+/*select bag image*/
+.ui.raised.card.bag-appearance {
+  width: 49%;
+  height: 250px;
+  margin: 10px 0 0 0;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.bag-appearance-image > img {
+  height: 220px;
+  width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.bag-appearance-content {
+  padding-left: 10px;
+}
+
+.bottom-button > a:first-child {
+  margin-bottom: 5px;
+}
+
+/*select content image*/
+.possible-contents {
+  margin-top: 10px;
+}
+.ui.raised.card.content-option {
+  width: 49%;
+  display: inline-block;
+  margin: 0;
+}
+
+/*contact information*/
+#contact-info-form {
+  margin-top: 10px;
+}
+
+.form-header {
+  margin: 10px 0 5px 0;
+}
+
+/*all resolved reports*/
+.card-button {
+  margin-top: 10px;
+}
+
+.possible-reports {
+  margin-top: 10px;
+}
+
+.confirmation-result {
+  margin-bottom: 20px;
+}
+
+.result-image-label {
+  margin: 3px 0;
+}

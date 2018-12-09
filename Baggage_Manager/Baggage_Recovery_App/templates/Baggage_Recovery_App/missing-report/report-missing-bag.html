@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>United Baggage Manager - Missing Report - Report Missing Baggage</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'Baggage_Recovery_App/style.css' %}">
+  <link rel='stylesheet' href='https://oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.css' />
+</head>
+<body class="ui">
+  <div class="nav-bar">
+    <div class="nav-bar-button">
+      <a href="../index.html"><i class="angle left icon"></i>Back</a>
+    </div>
+    <div class="nav-bar-logo"><img src={% static 'Baggage_Recovery_App/asset/UA-logo-white.svg' %} alt=""></div>
+  </div>
+
+  <div class="main">
+    <form class="ui form" action="/Baggage_Recovery_App/missing-report/saveReport" method="post" enctype="multipart/form-data">
+      <div class="grouped fields">
+        {% csrf_token %}
+        <input style="display: none" type="text" id="pid" name="pid">
+        <h1>Report Missing Baggage</h1>
+        <div class="meta">
+          Please tell us some key information about your bag so we can find it as soon as possible.
+        </div>
+
+        <div class="ui items" style="display: none;" id="bagSelectionContainer">
+          <div class="meta">
+            Please select which of your saved bags is lost.
+          </div>
+          <div class="field" id="bag-selection">
+            <input type="hidden" name="confirm_bag_selection" id="confirm_bag_selection" value="">
+          </div>
+        </div>
+
+        <div class="report-section">
+          <h1>Appearance</h1>
+          <div class="meta">
+            Size
+          </div>
+          <div class="ui fluid search selection dropdown">
+            <input type="hidden" name="size">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Size</div>
+            <div class="menu">
+              <div class="item" data-value="Carry on or cabin">
+                Carry-on
+              </div>
+              <div class="item" data-value="Small">
+                Small
+              </div>
+              <div class="item" data-value="Medium">
+                Medium
+              </div>
+              <div class="item" data-value="Large">
+                Large
+              </div>
+              <div class="item" data-value="Oversize">
+                Oversize
+              </div>
+            </div>
+          </div>
+
+          <div class="meta">
+            Color
+          </div>
+          <div class="ui fluid search selection dropdown">
+            <input type="hidden" name="color">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Color</div>
+            <div class="menu">
+              <div class="item" data-value="multicolor">
+                multicolor<p class="color-block multicolor"></p>
+              </div>
+              <div class="item" data-value="clear">
+                clear
+              </div>
+              <div class="item" data-value="black">
+                black<p class="color-block black"></p>
+              </div>
+              <div class="item" data-value="grey">
+                grey<p class="color-block grey"></p>
+              </div>
+              <div class="item" data-value="blue">
+                blue<p class="color-block blue"></p>
+              </div>
+              <div class="item" data-value="purple">
+                purple<p class="color-block purple"></p>
+              </div>
+              <div class="item" data-value="red">
+                red<p class="color-block red"></p>
+              </div>
+              <div class="item" data-value="yellow">
+                yellow<p class="color-block yellow"></p>
+              </div>
+              <div class="item" data-value="brown">
+                brown<p class="color-block brown"></p>
+              </div>
+              <div class="item" data-value="green">
+                green<p class="color-block green"></p>
+              </div>
+              <div class="item" data-value="beige">
+                beige<p class="color-block beige"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="meta">
+            Brand
+          </div>
+          <div class="ui fluid search selection dropdown brand-dropdown">
+            <input type="hidden" name="brand" id="brandName">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select or Type Brand Name</div>
+            <div class="menu">
+              <div class="item" data-value="Samsonite">
+                Samsonite
+              </div>
+              <div class="item" data-value="TUMI">
+                TUMI
+              </div>
+              <div class="item" data-value="American Tourister">
+                American Tourister
+              </div>
+              <div class="item" data-value="Ricardo of Beverly Hills">
+                Ricardo of Beverly Hills
+              </div>
+              <div class="item" data-value="Jansport">
+                Jansport
+              </div>
+              <div class="item" data-value="Briggs and Riley">
+                Briggs and Riley
+              </div>
+              <div class="item" data-value="Heys">
+                Heys
+              </div>
+              <div class="item" data-value="Delsey">
+                Delsey
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="report-section">
+          <h1>Contents</h1>
+          <div class="ui grid slider-section">
+            <div class="eight wide column">
+              <div class="ui slider checkbox item">
+                <input type="checkbox" name="item1" value=“1”>
+                <label>{{ item1 }}</label>
+              </div>
+              <div class="ui slider checkbox item">
+                <input type="checkbox" name="item2" value=“1”>
+                <label>{{ item2 }}</label>
+              </div>
+              <div class="ui slider checkbox item">
+                <input type="checkbox" name="item3" value=“1”>
+                <label>{{ item3 }}</label>
+              </div>
+              <div class="ui slider checkbox item">
+                <input type="checkbox" name="item4" value=“1”>
+                <label>{{ item4 }}</label>
+              </div>
+              <div class="ui slider checkbox item">
+                <input type="checkbox" name="item5" value=“1”>
+                <label>{{ item5 }}</label>
+              </div>
+            </div>
+
+
+            <div class="eight wide column">
+              <div class="ui slider checkbox item">
+                <input type="checkbox" name="item6" value=“1”>
+                <label>{{ item6 }}</label>
+              </div>
+              <div class="ui slider checkbox item">
+                <input type="checkbox" name="item7" value=“1”>
+                <label>{{ item7 }}</label>
+              </div>
+              <div class="ui slider checkbox item">
+                <input type="checkbox" name="item8" value=“1”>
+                <label>{{ item8 }}</label>
+              </div>
+              <div class="ui slider checkbox item">
+                <input type="checkbox" name="item9" value=“1”>
+                <label>{{ item9 }}</label>
+              </div>
+              <div class="ui slider checkbox item">
+                <input type="checkbox" name="item10" value=“1”>
+                <label>{{ item10 }}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="report-section">
+          <h1>Details</h1>
+          <div class="meta">Please describe in detail any unique items you packed in this bag.</div>
+          <div class="ui form">
+            <textarea rows="5" name="details"></textarea>
+          </div>
+        </div>
+
+        <div class="report-section">
+          <h1>Contact Info</h1>
+          <div>
+            <div class="ui form">
+              <div class="field">
+                <label>First Name</label>
+                <input type="text" name="firstName" placeholder="First Name">
+              </div>
+              <div class="field">
+                <label>Last Name</label>
+                <input type="text" name="lastName" placeholder="Last Name">
+              </div>
+              <div class="field">
+                <label>Permanent Address</label>
+                <input type="text" name="permanantAddress" placeholder="Permanant Address">
+              </div>
+              <div class="field">
+                <label>Temporary Address</label>
+                <input type="text" name="temporaryAddress" placeholder="Temporary Address">
+              </div>
+              <div class="field">
+                <label>Temporary Address Valid Before</label>
+                <input type="text" name="validBefore" placeholder="DD/MM/YYYY">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui error message"></div>
+
+        <div class="bottom-button">
+          <input class="ui ua-blue fluid button" type="Submit" value="Submit">
+        </div>
+      </div>
+    </form>
+  </div>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.js"></script>
+  <script type="text/javascript" src={% static 'Baggage_Recovery_App/missing-report/app.js'%}></script>
+</body>
+</html>

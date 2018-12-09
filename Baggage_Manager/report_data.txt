@@ -1,0 +1,6 @@
+# grey;Large;Diplomat;1;1;0;1;0;1;1;0;1;0;A white nike tshirt in small size.;123;110 8th St, Troy, NY 12180;275 Windsor St, Hartford, CT 06120;03/28/2018
+# black;Large;Columbia;0;0;1;1;1;1;1;1;0;1;A white nike tshirt in small size.;234;110 8th St, Troy, NY 12180;275 Windsor St, Hartford, CT 06120;03/28/2018
+grey;Medium;TUMI;1;1;0;1;0;1;1;0;1;1;A white nike tshirt in small size.;345;110 8th St, Troy, NY 12180;275 Windsor St, Hartford, CT 06120;03/28/2018
+grey;Medium;Samsonite;0;0;1;1;0;1;1;1;1;1;A white nike tshirt in small size.;456;110 8th St, Troy, NY 12180;275 Windsor St, Hartford, CT 06120;03/28/2018
+blue;Large;Delsey;1;1;1;1;1;1;1;0;1;1;A white nike tshirt in small size.;567;110 8th St, Troy, NY 12180;275 Windsor St, Hartford, CT 06120;03/28/2018
+purple;Carry on or cabin;Jansport;0;1;1;0;1;1;1;0;1;0;A white nike tshirt in small size.;ABC12345;110 8th St, Troy, NY 12180;275 Windsor St, Hartford, CT 06120;03/28/2018

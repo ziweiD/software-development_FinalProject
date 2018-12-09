@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>United Baggage Assistant - Register New Bag - Baggage Appearance</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'Baggage_Recovery_App/style.css' %}">
+  <link rel='stylesheet' href='https://oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.css' />
+</head>
+<body class="ui" >
+  <div class="nav-bar">
+    <div class="nav-bar-button">
+      <a href="../warehouse.html"><i class="angle left icon"></i>Back</a>
+    </div>
+    <div class="nav-bar-logo"><img src={% static 'Baggage_Recovery_App/asset/UA-logo-white.svg' %} alt=""></div>
+  </div>
+
+  <div id="exampleImg" class="ui active dimmer">
+    <div class="example-button">
+      <a onclick="hideExampleImg()">CLOSE</a>
+    </div>
+    <img class="example-image" src="{% static 'Baggage_Recovery_App/asset/example.jpg' %}" alt="">
+  </div>
+
+  <div class="main">
+    <form class="ui form" action="/Baggage_Recovery_App/wh-register-new-bag/saveBagAppearance" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input style="display: none" id="currentBagId" type="text" name="currentBagId" value="{{ bagid }}">
+      <div class="report-section">
+        <h1>Appearance</h1>
+        <div class="meta">
+          Size (height)
+        </div>
+        <div class="ui fluid search selection dropdown">
+          <input type="hidden" name="size">
+          <i class="dropdown icon"></i>
+          <div class="default text">Select Size</div>
+          <div class="menu">
+            <div class="item" data-value="15">
+              under 16"
+            </div>
+            <div class="item" data-value="16">
+              16"
+            </div>
+            <div class="item" data-value="18">
+              18"
+            </div>
+            <div class="item" data-value="20">
+              20"
+            </div>
+            <div class="item" data-value="22">
+              22"
+            </div>
+            <div class="item" data-value="24">
+              24"
+            </div>
+            <div class="item" data-value="26">
+              26"
+            </div>
+            <div class="item" data-value="28">
+              28"
+            </div>
+            <div class="item" data-value="30">
+              30"
+            </div>
+            <div class="item" data-value="31">
+              above 30"
+            </div>
+          </div>
+        </div>
+
+        <div class="meta">
+          Color
+        </div>
+        <div class="ui fluid search selection dropdown">
+          <input type="hidden" name="color">
+          <i class="dropdown icon"></i>
+          <div class="default text">Select Color</div>
+          <div class="menu">
+            <div class="item" data-value="multicolor">
+              multicolor<p class="color-block multicolor"></p>
+            </div>
+            <div class="item" data-value="clear">
+              clear
+            </div>
+            <div class="item" data-value="black">
+              black<p class="color-block black"></p>
+            </div>
+            <div class="item" data-value="grey">
+              grey<p class="color-block grey"></p>
+            </div>
+            <div class="item" data-value="blue">
+              blue<p class="color-block blue"></p>
+            </div>
+            <div class="item" data-value="purple">
+              purple<p class="color-block purple"></p>
+            </div>
+            <div class="item" data-value="red">
+              red<p class="color-block red"></p>
+            </div>
+            <div class="item" data-value="yellow">
+              yellow<p class="color-block yellow"></p>
+            </div>
+            <div class="item" data-value="brown">
+              brown<p class="color-block brown"></p>
+            </div>
+            <div class="item" data-value="green">
+              green<p class="color-block green"></p>
+            </div>
+            <div class="item" data-value="beige">
+              beige<p class="color-block beige"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="meta">
+          Brand
+        </div>
+        <div class="ui fluid search selection dropdown">
+          <input type="hidden" name="brand" id="brandName">
+          <i class="dropdown icon"></i>
+          <div class="default text">Select Brand Name</div>
+          <div class="menu">
+            <div class="item" data-value="Samsonite">
+              Samsonite
+            </div>
+            <div class="item" data-value="TUMI">
+              TUMI
+            </div>
+            <div class="item" data-value="American Tourister">
+              American Tourister
+            </div>
+            <div class="item" data-value="Ricardo of Beverly Hills">
+              Ricardo of Beverly Hills
+            </div>
+            <div class="item" data-value="Jansport">
+              Jansport
+            </div>
+            <div class="item" data-value="Briggs and Riley">
+              Briggs and Riley
+            </div>
+            <div class="item" data-value="Heys">
+              Heys
+            </div>
+            <div class="item" data-value="Delsey">
+              Delsey
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="report-section">
+        <h1>Add New Bag</h1>
+        <div class="meta">
+          Please upload an image of the front of your bag. Make sure that the bag is centered and takes up as much of the image as possible.
+          <a onclick="showExampleImg()">See Example</a>
+        </div>
+        <div class="upload-image">
+          <label for="bagImageInput" class="ui ua-blue button">Add Image</label>
+          <input id="bagImageInput" onchange="displayAsImage()" type="file" accept="image/*" name="bagImage">
+        </div>
+        <div id="preview"></div>
+      </div>
+
+      <div class="ui error message"></div>
+
+      <div class="bottom-fixed-button">
+        <input class="ui ua-blue circular fluid button" type="Submit" value="Next">
+      </div>
+    </form>
+  </div>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.js"></script>
+  <script type="text/javascript" src={% static 'Baggage_Recovery_App/wh-register-new-bag/app.js'%}></script>
+</body>
+</html>

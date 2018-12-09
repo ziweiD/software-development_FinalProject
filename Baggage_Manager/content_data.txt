@@ -1,0 +1,10 @@
+1;Books
+2;Currency
+3;Optics
+4;ID
+5;Tobacco
+6;Footwear
+7;Electronics
+8;Dresses
+9;Shirts
+10;Medication

@@ -1,0 +1,6 @@
+3.JPG;28;grey;Diplomat;1;1;0;1;0;1;1;0;1;0;A white nike tshirt in small size.;3-1.JPG;3-2.JPG
+# 1.jpeg;26;black;Columbia;0;0;1;1;1;1;1;1;0;1;A white nike tshirt in small size.;1-1.JPG;1-2.jpg
+2.jpeg;24;grey;TUMI;1;1;0;1;0;1;1;0;1;1;A white nike tshirt in small size.;2-1.JPG;2-2.JPG
+4.JPG;20;grey;Samsonite;0;0;1;1;0;1;1;1;1;1;A white nike tshirt in small size.;4-1.JPG;4-2.JPG
+5.jpg;15;purple;Jansport;0;1;1;0;1;1;1;0;1;0;A white nike tshirt in small size.;5-1.JPG;5-2.JPG
+# 6.jpg;26;blue;Delsey;1;1;1;1;1;1;1;0;1;1;A white nike tshirt in small size.;6-1.jpg;6-2.JPG

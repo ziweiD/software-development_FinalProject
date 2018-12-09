@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>United Baggage Manager - add new bag</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'Baggage_Recovery_App/style.css' %}">
+  <link rel='stylesheet' href='https://oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.css' />
+</head>
+<body>
+  <div id="exampleImg" class="ui active dimmer">
+    <div class="example-button">
+      <a onclick="hideExampleImg()">CLOSE</a>
+    </div>
+    <img class="example-image" src="{% static 'Baggage_Recovery_App/asset/example.jpg' %}" alt="">
+  </div>
+  <div class="nav-bar">
+    <div class="nav-bar-button">
+      <a href="my-baggage.html"><i class="angle left icon"></i>Back</a>
+    </div>
+    <div class="nav-bar-logo"><img src={% static 'Baggage_Recovery_App/asset/UA-logo-white.svg' %} alt=""></div>
+  </div>
+
+  <div class="main">
+    <form action="/Baggage_Recovery_App/baggage-management/addNewBag" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <h1>Add New Bag</h1>
+      <div class="meta">
+        Please upload an image of the front of your bag. Make sure that the bag is centered and takes up as much of the image as possible.
+        <a onclick="showExampleImg()">See Example</a>
+      </div>
+      <div class="upload-image">
+        <label for="bagImageInput" class="ui ua-blue button">Add Image</label>
+        <input id="bagImageInput" onchange="displayAsImage()" type="file" accept="image/*" name="bagImage">
+      </div>
+      <div id="preview"></div>
+      <h1>Name This Bag</h1>
+      <div class="meta">
+        Please give a name for this bag.
+      </div>
+      <div class="ui fluid input">
+        <input type="text" placeholder="Input here" id="bagName" name="bagName">
+      </div>
+      <input style="display: none" type="text" id="pid" name="pid">
+      <div class="bottom-fixed-button">
+        <input class="ui ua-blue fluid button" type="Submit" value="Submit">
+      </div>
+    </form>
+  </div>
+
+  <script type="text/javascript" src={% static 'Baggage_Recovery_App/baggage-management/app.js'%}></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+</body>
+</html>
